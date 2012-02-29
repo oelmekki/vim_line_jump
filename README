@@ -1,0 +1,3 @@
+I want to be able to do : vim my_filename:my_line to open vim directly at this line. Yeah, I could use vim my_filename +my_line, but you know, grep is the kind of guy who likes putting colons to glue filenames and line numbers, and really, I hate editing what my mouse paste with all its love.
+
+So, this is just a wrapper to turn filename:line to filename +line. I didn't felt loading a ruby interpreter each time I run vim, so I wrote creepy C.
