@@ -59,7 +59,7 @@ void roxor_linator( Data * data )
     file    = strtok( (*data).files[0], ":" );
     line_no = strtok( NULL, ":" );
     command = compute_command( command, data );
-    command = realloc( command, ( ( strlen( line_no ) + 2 ) * sizeof( char ) ) );
+    command = realloc( command, ( ( strlen( line_no ) + strlen( command ) + 2 ) * sizeof( char ) ) );
     sprintf( command, "%s %s%s", command, " +", line_no );
 
     system( command );
